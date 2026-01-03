@@ -1,0 +1,13 @@
+.callback-success {
+  text-align: center;
+}
+
+.callback-success h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 8px;
+}
+
+.callback-success p {
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}

@@ -1,11 +1,22 @@
-import React from 'react'
+// components/ui/Button/Button.jsx
+import "./Button.css";
 
-const Button = () => {
+function Button({
+  children,
+  variant = "primary",
+  onClick,
+  type = "button",
+  className = ""
+}) {
   return (
-    <div>
-      
-    </div>
-  )
+    <button
+      type={type}
+      onClick={onClick}
+      className={`btn btn-${variant} ${className}`}
+    >
+      {children}
+    </button>
+  );
 }
 
-export default Button
+export default Button;

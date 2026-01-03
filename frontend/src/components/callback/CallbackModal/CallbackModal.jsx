@@ -1,11 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
+import "./CallbackModal.css";
+import CallbackForm from "../CallbackForm/CallbackForm";
+import CallbackSuccess from '../CallbackSuccess/CallbackSuccess';
 
-const CallbackModal = () => {
+function CallbackModal({ isOpen, onClose }) {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    
+    if (!isOpen) return null;
+
+    function handleClose() {
+        setIsSubmitted(false); // reset for next time
+        onClose();
+    }
+
+
   return (
-    <div>
-      
-    </div>
-  )
-}
+        <div className="callback-overlay" onClick={handleClose}>
+            <div
+                className="callback-modal"
+                onClick={(e) => e.stopPropagation()}
+            >
+                
+            <button className="close-btn" onClick={handleClose}>✕</button>
 
-export default CallbackModal
+            {!isSubmitted ? (
+            <>
+                <h2>Request a Callback</h2>
+                <p>Fill the form and our team will contact you.</p>
+
+                <CallbackForm onSuccess={() => setIsSubmitted(true)} />
+            </>
+            ) : (
+            <CallbackSuccess onClose={handleClose} />
+            )}
+            </div>
+        </div>
+    );
+ }
+
+export default CallbackModal;
+
