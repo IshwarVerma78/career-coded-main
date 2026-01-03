@@ -1,0 +1,69 @@
+/* styles/typography.css */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+/* Option 2 (commented) */
+/*
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+*/
+
+/* ===============================
+   BASE TYPOGRAPHY
+   =============================== */
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* ===============================
+   HEADINGS
+   =============================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+
+/* ===============================
+   TEXT
+   =============================== */
+
+p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.small-text {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ===============================
+   BUTTON TEXT
+   =============================== */
+
+button {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+/* ===============================
+   LINKS
+   =============================== */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

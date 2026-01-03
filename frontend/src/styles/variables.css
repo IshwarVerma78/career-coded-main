@@ -1,0 +1,60 @@
+/* styles/variables.css */
+
+/* ===============================
+   COLOR PALETTE
+   =============================== */
+
+:root {
+  /* Primary Colors */
+  --color-dark: #2d3142;
+  --color-muted: #bfc0c0;
+  --color-white: #ffffff;
+  --color-primary: #ef8354;
+  --color-secondary: #4f5d75;
+
+  /* Backgrounds */
+  --bg-main: var(--color-white);
+  --bg-dark: var(--color-dark);
+
+  /* Text */
+  --text-primary: var(--color-dark);
+  --text-secondary: var(--color-secondary);
+  --text-muted: var(--color-muted);
+  --text-inverse: var(--color-white);
+
+  /* Border */
+  --border-light: var(--color-muted);
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+}
+
+/* ===============================
+   FONT VARIABLES (Option 1 DEFAULT)
+   =============================== */
+
+:root {
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+/* ===============================
+   FONT VARIABLES (OPTION 2 – FUTURE)
+   Uncomment when needed
+   =============================== */
+
+/*
+:root {
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+*/

@@ -1,0 +1,204 @@
+/* Navbar.css */
+
+/* ❌ Fonts + :root yahan nahi hone chahiye
+   ✅ Ye sab ab styles/variables.css & typography.css me hai
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===============================
+   NAVBAR
+   =============================== */
+
+.navbar {
+  height: 70px;
+  padding: 0 32px;
+  background: var(--bg-main);
+  border-bottom: 2px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-family: var(--font-body);
+}
+
+/* ===============================
+   LEFT
+   =============================== */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+}
+
+/* ===============================
+   CENTER
+   =============================== */
+
+.nav-center {
+  display: flex;
+  gap: 36px;
+}
+
+.nav-center li {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  position: relative;
+  font-family: var(--font-body);
+}
+
+/* Links */
+.nav-center a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+/* Active underline (NavLink) */
+.nav-center a.active::after {
+  width: 100%;
+}
+
+/* Hover underline */
+.nav-center li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: 0.3s;
+}
+
+.nav-center li:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   RIGHT
+   =============================== */
+
+.nav-right {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-right a {
+  text-decoration: none;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+
+.btn-outline {
+  padding: 8px 16px;
+  border: 2px solid var(--color-secondary);
+  background: transparent;
+  color: var(--color-secondary);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: var(--font-body);
+}
+
+.btn-outline:hover {
+  background: var(--color-secondary);
+  color: var(--text-inverse);
+}
+
+.btn-primary {
+  padding: 8px 18px;
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+/* ===============================
+   MENU WRAPPER
+   =============================== */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* ===============================
+   HAMBURGER
+   =============================== */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-primary);
+  border-radius: var(--radius-sm);
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-main);
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-light);
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-center {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
